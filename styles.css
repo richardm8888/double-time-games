@@ -39,6 +39,15 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 /* Container */
 .container {
     max-width: 900px;
@@ -144,6 +153,8 @@ menu ul li a {
     color: var(--color-dark);
     font-size: 20px;
     font-weight: 500;
+    height: 40px;
+    width: 100%;
 }
 
 @media (max-width: 900px) {
@@ -238,6 +249,18 @@ footer {
 
 .ml-form-embedBody {
     padding: 0 !important;
+}
+
+div.about-images {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-unit);
+}
+
+img.about-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }
 
 /* Responsive Design */
