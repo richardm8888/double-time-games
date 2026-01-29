@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double Time Games</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        function toggleMenu() {
+            // Placeholder for menu toggle functionality
+            document.getElementById('burger-menu').classList.toggle('open');
+            document.querySelector('.rhythm-mark').classList.toggle('open');
+        }
+    </script>
+
+    <!-- MailerLite Universal -->
+    <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '2070724');
+    </script>
+    <!-- End MailerLite Universal -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/LogoTransparent.png" alt="Double Time Games" class="logo-wordmark">
+            </div>
+            <div class="rhythm-mark" onclick="toggleMenu();"></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Fast turns.<br>Smart choices.</h1>
+                    <p class="tagline">We publish fast-moving, replayable tabletop games built around sharp decisions and clean design.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="coming-soon">
+            <div class="container vertical">
+                <h2>Our first games will be launching on kickstarter soon.</h2>
+                <div class="ml-embedded" data-form="N22yM0"></div>
+            </div>
+        </section>
+
+        <menu id="burger-menu" class="menu">
+            <ul>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#our-games">Our Games</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </menu>
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <img src="assets/IconDark.png" alt="Double Time Games" class="footer-logo">
+            <p class="copyright">&copy; 2026 Double Time Games</p>
+        </div>
+    </footer>
+</body>
+</html>

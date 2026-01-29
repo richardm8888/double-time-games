@@ -1,0 +1,279 @@
+/* ==========================================
+   DOUBLE TIME GAMES — WEBSITE STYLES
+   ========================================== */
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Brand Colors */
+    --color-dark: #0F0F12;
+    --color-light: #F4F2EE;
+    --color-light-dark: #DFD9CE;
+    --color-accent: #1ED4C6;
+    
+    /* Typography */
+    --font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    
+    /* Spacing */
+    --spacing-unit: 24px;
+    --spacing-small: 20px;
+    --spacing-medium: 40px;
+    --spacing-large: 80px;
+    --spacing-xlarge: 120px;
+    --spacing-xxlarge: 160px;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-unit);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: var(--spacing-unit);
+}
+
+.vertical {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+/* Typography */
+h1 {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--spacing-unit);
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+    margin-bottom: 0;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+}
+
+.tagline {
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+/* Header */
+header {
+    padding: 0;
+}
+
+main {
+
+}
+
+menu {
+    height: 100vh;
+    width: 0;
+    background-color: var(--color-light);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    transition: width .7s ease-in-out;
+    overflow: hidden;
+}
+
+menu.open {
+    width: calc((100vw - 900px));
+    box-shadow: -6px 1px 8px -2px rgba(15,15,18,0.77);
+}
+
+menu ul {
+    list-style: none;
+    padding-top: var(--spacing-xxlarge);
+    flex-direction: column;
+    gap: 0;
+    display: none;
+}
+
+menu.open ul {
+    display: flex;
+}
+
+menu ul li {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    padding: var(--spacing-unit);
+}
+
+menu ul li:hover {
+    cursor: pointer;
+    background-color: var(--color-light-dark);
+}
+
+menu ul li a {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+@media (max-width: 900px) {
+    menu {
+        right: 0;
+    }
+
+    menu.open {
+        width: 75vw;
+    }
+}
+
+.logo-wordmark {
+    height: 200px;
+    width: auto;
+}
+
+/* Hero Section */
+.hero {
+
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.rhythm-mark {
+    height: 60px;
+    width: 60px;
+    background-image: url('assets/RhythmMarkBlack.png');
+    background-size: cover;
+    transition: transform .7s ease-in-out;
+    z-index: 10;
+    cursor: pointer;
+}
+.rhythm-mark.open {
+    transform: rotate(360deg);
+}
+
+/* Sections */
+section {
+    padding: var(--spacing-small) 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.coming-soon > .container {
+    margin: 0;
+    max-width: 600px;
+}
+
+.coming-soon {
+    justify-content: flex-start;
+    margin: 0 auto;
+}
+
+/* Divider */
+.divider {
+    width: 100%;
+    max-width: 800px;
+    height: 2px;
+    background-color: var(--color-accent);
+    margin: var(--spacing-unit) auto;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-dark);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-unit);
+}
+
+.footer-logo {
+    height: 100px;
+    width: auto;
+}
+
+.copyright {
+    font-size: 14px;
+    color: var(--color-light);
+    letter-spacing: 0.05em;
+}
+
+.ml-form-embedBody {
+    padding: 0 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    :root {
+        --spacing-large: 60px;
+        --spacing-xlarge: 80px;
+    }
+    
+    h1 {
+        font-size: 40px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    p, .tagline {
+        font-size: 17px;
+    }
+    
+    .logo-wordmark {
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 32px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    .logo-wordmark {
+        height: 100px;
+    }
+}
